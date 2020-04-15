@@ -274,6 +274,8 @@ def main():
             if n_gpu > 1:
                 tmp_eval_loss = tmp_eval_loss.mean() # mean() to average on multi-gpu.
                 tmp_eval_accuracy = tmp_eval_accuracy.sum()
+                tmp_h_acc = tmp_h_acc.sum()
+                tmp_m_acc = tmp_m_acc.sum()
             eval_loss += tmp_eval_loss.item()
             eval_accuracy += tmp_eval_accuracy.item()
             eval_h_acc += tmp_h_acc.item()
@@ -315,6 +317,8 @@ def main():
             if n_gpu > 1:
                 tmp_eval_loss = tmp_eval_loss.mean() # mean() to average on multi-gpu.
                 tmp_eval_accuracy = tmp_eval_accuracy.sum()
+                tmp_h_acc = tmp_h_acc.sum()
+                tmp_m_acc = tmp_m_acc.sum()
             eval_loss += tmp_eval_loss.item()
             eval_accuracy += tmp_eval_accuracy.item()
             eval_h_acc += tmp_h_acc.item()
